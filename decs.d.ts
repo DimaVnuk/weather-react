@@ -1,1 +1,1 @@
-declare module "react-app-rewire-alias"
+declare module 'react-app-rewire-alias';

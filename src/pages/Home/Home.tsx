@@ -1,12 +1,16 @@
-import React from "react";
-import Header from "@/components/Header/Header";
-import style from "./Home.module.scss";
-type Props = {};
+import React from 'react';
 
-const Home = (props: Props) => {
+import Header from '@/components/Header/Header';
+import CurrenDayInfoDay from '@/containers/CurrenDayInfoDay/CurrenDayInfoDay';
+import WeatherCard from '@/containers/WeatherCard/WeatherCard';
+import style from '@/pages/Home/Home.module.scss';
+
+const Home = () => {
   return (
     <div className={style.home}>
       <Header />
+      <CurrenDayInfoDay />
+      <WeatherCard />
     </div>
   );
 };

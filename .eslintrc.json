@@ -1,49 +1,47 @@
 {
-	"env": {
-			"browser": true,
-			"es2021": true
-	},
-	"settings": {
-			"react": {
-					"version": "detect"
-			}
-	},
-	"extends": [
-			"airbnb-typescript/base",
-			"eslint:recommended",
-			"plugin:@typescript-eslint/recommended",
-			"plugin:prettier/recommended",
-			"plugin:import/recommended",
-			"plugin:import/typescript",
-			"prettier",
-			"plugin:react/recommended"
-	],
-	"parser": "@typescript-eslint/parser",
-	"parserOptions": {
-			"project": "./tsconfig.json",
-			"ecmaFeatures": {
-					"jsx": true,
-					"tsx": true
-			},
-			"ecmaVersion": "latest",
-			"sourceType": "module"
-	},
-	"plugins": [
-			"@typescript-eslint",
-			"better-styled-components",
-			"simple-import-sort",
-			"prettier",
-			"react",
-			"react-hooks"
-	],
-	"rules": {
-			"max-len": ["warn", { "code": 120 }],
-			"import/prefer-default-export": "off",
-			"react/react-in-jsx-scope": "off",
-			"import/no-unresolved": "off",
-			"import/extensions": "off",
-			"simple-import-sort/imports": "error",
-			"simple-import-sort/exports": "error",
-			"better-styled-components/sort-declarations-alphabetically": 2
-	}
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "airbnb-typescript/base",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "prettier",
+    "plugin:react/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true,
+      "tsx": true,
+      "ts": true,
+      "js": true
+      /* "experimentalObjectRestSpread": true */
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "better-styled-components", "simple-import-sort", "prettier", "react", "react-hooks"],
+  "rules": {
+    "max-len": ["warn", { "code": 120 }],
+    "import/prefer-default-export": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "better-styled-components/sort-declarations-alphabetically": 2,
+    "sort-imports": "off",
+    "import/order": "off"
+  }
 }

@@ -1,5 +1,16 @@
 .cont {
-width: 100%;
-height: 20vh;
-border: 1px solid #000;
+  width: 80%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+.contInput {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid green;
 }

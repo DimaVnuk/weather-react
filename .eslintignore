@@ -1,1 +1,6 @@
-node_modules
+/node_modules
+/dist
+.eslint.json
+craco.config.js
+config-overrides.js
+tsconfig.json
