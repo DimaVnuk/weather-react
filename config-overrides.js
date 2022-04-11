@@ -14,7 +14,8 @@ module.exports = function override(config) {
       '@/styled-components': path.resolve(__dirname, 'src/styled-components'),
       '@/utils': path.resolve(__dirname, 'src/utils'),
       '@/styles': path.resolve(__dirname, 'src/styles'),
-      '@/assets': path.resolve(__dirname, 'src/assets')
+      '@/assets': path.resolve(__dirname, 'src/assets'),
+      '@/hooks': path.resolve(__dirname, 'src/hooks'),
     },
   };
   return config;
