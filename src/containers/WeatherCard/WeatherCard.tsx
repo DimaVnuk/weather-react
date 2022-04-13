@@ -1,10 +1,11 @@
+import '@/containers/WeatherCard/WeatherCard.scss';
+
 import React from 'react';
 
 import Card from '@/components/Card/Card';
-import style from '@/containers/WeatherCard/WeatherCard.module.scss';
 const WeatherCard = () => {
   return (
-    <div className={style.cont}>
+    <div className="weatherCard-cont">
       <Card />
     </div>
   );

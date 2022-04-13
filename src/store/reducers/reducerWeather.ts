@@ -6,7 +6,9 @@ const initialState: WeatherState = {
   error: null,
 };
 
+/* eslint-disable */
 export function reducerWeather(state = initialState, action: WeatherAction): WeatherState {
+  /* eslint-enable */
   switch (action.type) {
     case WeatherActionTypes.SET_WEATHER:
       return {

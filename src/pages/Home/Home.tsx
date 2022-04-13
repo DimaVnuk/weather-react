@@ -3,12 +3,11 @@ import React from 'react';
 import Header from '@/components/Header/Header';
 import CurrenDayInfoDay from '@/containers/CurrenDayInfoDay/CurrenDayInfoDay';
 import WeatherCard from '@/containers/WeatherCard/WeatherCard';
-import style from '@/pages/Home/Home.module.scss';
-
-const Home = () => {
+import { HeaderProps } from '@/interfaces/HeaderProps';
+const Home = ({ handleChange, selected }: HeaderProps) => {
   return (
-    <div className={style.home}>
-      <Header />
+    <div className="home">
+      <Header handleChange={handleChange} selected={selected} />
       <CurrenDayInfoDay />
       <WeatherCard />
     </div>

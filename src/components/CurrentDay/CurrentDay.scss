@@ -1,19 +1,19 @@
-.cont {
+.currentDay-cont {
   width: 35%;
   height: 40vh;
   border: 1px solid #000;
   border-radius: 20px;
-  .temp__cont {
+  .currentDay-temp__cont {
     height: 25vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border: 1px solid purple;
-    .temp__font {
+    .currentDay-temp__font {
       font-size: 4rem;
     }
   }
-  .time__cont {
+  .currentDay-time__cont {
     font-size: 1.5rem;
   }
 }

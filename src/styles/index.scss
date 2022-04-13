@@ -1,1 +1,8 @@
 @import '~normalize.css';
+@import '@/pages/Home/Home.scss';
+@import '@/components/Card/Card.scss';
+@import '@/components/CurrentDay/CurrentDay.scss';
+@import '@/components/Header/Header.scss';
+@import '@/components/WeatherDayInfo/WeatherDayInfo.scss';
+@import '@/containers/CurrenDayInfoDay/CurrenDayInfoDay.scss';
+@import '@/containers/WeatherCard/WeatherCard.scss';

@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
-import style from '@/components/WeatherDayInfo/WeatherDayInfo.module.scss';
+import { useTypeSelector } from '@/hooks/useTypeSelector';
+import { getWeather } from '@/store/actions/actionWeather';
 const WeatherDayInfo = () => {
+  const { weather } = useTypeSelector((state) => state.weather);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getWeather());
+  }, []);
+
+  /* const temperat = `${Math.round(weather.main.temp - 273)} &deg`; */
   return (
-    <div className={style.cont}>
-      <div className={style.info}>
+    <div className="weatherDayInfo-cont">
+      <div className="weatherDayInfo-info">
         <div>Температура:</div>
         <div>Давление: </div>
         <div>Осадки: </div>
