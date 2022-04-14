@@ -1,16 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import Loader from '@/components/Loader/Loader';
-import useActions from '@/hooks/useActions';
+import useFetch from '@/hooks/useFetch';
 import { useTypeSelector } from '@/hooks/useTypeSelector';
 
 const WeatherDayInfo = () => {
   const { weather, loading, success } = useTypeSelector((state) => state.weather);
-  const { getWeather } = useActions();
-
-  useEffect(() => {
-    getWeather();
-  }, []);
+  useFetch();
 
   if (loading) {
     return (

@@ -10,7 +10,14 @@
     align-items: center;
     border: 1px solid purple;
     .currentDay-temp__font {
+      border: 1px solid #000;
+      display: flex;
+      justify-content: center;
       font-size: 4rem;
+    }
+    .currentDay-date {
+      // refactor name
+      font-size: 2.3rem;
     }
   }
   .currentDay-time__cont {
