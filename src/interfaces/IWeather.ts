@@ -1,7 +1,8 @@
 export interface WeatherState {
   weather: any;
   loading: boolean;
-  error: null | string;
+  error: null | boolean;
+  success: boolean;
 }
 
 export enum WeatherActionTypes {

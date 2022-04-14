@@ -8,4 +8,5 @@ export const darkTheme = {
   body: '#363537',
   text: '#FAFAFA',
   background: '#999',
+  border: '1px solid #FAFAFA',
 };

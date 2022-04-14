@@ -1,9 +1,10 @@
 import { WeatherAction, WeatherActionTypes, WeatherState } from '@/interfaces/IWeather';
 
 const initialState: WeatherState = {
-  weather: [],
+  weather: {},
   loading: false,
-  error: null,
+  success: false,
+  error: false,
 };
 
 /* eslint-disable */
@@ -13,23 +14,19 @@ export function reducerWeather(state = initialState, action: WeatherAction): Wea
     case WeatherActionTypes.SET_WEATHER:
       return {
         ...state,
-        weather: [],
         loading: true,
-        error: null,
       };
     case WeatherActionTypes.SET_WEATHER_SUCCESS:
       return {
         ...state,
+        loading: false,
+        success: true,
         weather: action.payload,
-        loading: true,
-        error: null,
       };
     case WeatherActionTypes.SET_WEATHER_ERROR:
       return {
         ...state,
-        weather: [],
-        loading: false,
-        error: action.payload,
+        error: true,
       };
     default:
       return state;

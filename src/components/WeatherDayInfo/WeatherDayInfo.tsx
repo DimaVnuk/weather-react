@@ -1,30 +1,37 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useCallback, useEffect } from 'react';
 
+import useActions from '@/hooks/useActions';
 import { useTypeSelector } from '@/hooks/useTypeSelector';
-import { getWeather } from '@/store/actions/actionWeather';
+
 const WeatherDayInfo = () => {
-  const { weather } = useTypeSelector((state) => state.weather);
-  const dispatch = useDispatch();
+  const { weather, loading, success } = useTypeSelector((state) => state.weather);
+  const { getWeather } = useActions();
+
+  const { main, wind } = weather.list[0];
 
   useEffect(() => {
-    dispatch(getWeather());
+    getWeather();
   }, []);
 
-  /* const temperat = `${Math.round(weather.main.temp - 273)} &deg`; */
+  if (loading) {
+    return <h1>Loading...</h1>;
+  }
+
   return (
     <div className="weatherDayInfo-cont">
       <div className="weatherDayInfo-info">
-        <div>Температура:</div>
-        <div>Давление: </div>
-        <div>Осадки: </div>
+        <div>Температура: </div>
         <div>Ветер: </div>
+        <div>Влажность: </div>
       </div>
       <div>
-        <div>20 - ощущается как 17</div>
-        <div>765 мм ртутного столба - нормально</div>
-        <div>Без осадков </div>
-        <div>3 м/с юго-запад - легкий ветер</div>
+        <div>
+          {success && `${Math.round(main.temp - 273)}`} &deg;C - ощущается как
+          {success && ` ${Math.round(main.feels_like - 273)}`}
+          &deg;C
+        </div>
+        <div>{success && Math.round(wind.speed)} м/с</div>
+        <div>{success && main.humidity} %</div>
       </div>
     </div>
   );
