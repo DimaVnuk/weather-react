@@ -29,15 +29,13 @@ const CurrentDay = () => {
           </p>
           <p className="currentDay-date">{success && date}</p>
         </div>
-        <div>
-          <Image src={rain} alt="rain" />
-        </div>
+        <div>{success && <Image src={`http://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`} alt="rain" />}</div>
       </div>
       <div className="currentDay-time__cont">
         <p>
           Время: <Clock />
         </p>
-        <p>Город: Могилев</p>
+        <p>Город: </p>
       </div>
     </div>
   );
