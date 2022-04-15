@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 
 const Clock = () => {
   const currentTime = moment().format('HH:mm:ss');
-  const [time, setTime] = useState<any>(() => currentTime);
+  const [time, setTime] = useState(() => currentTime);
 
   useEffect(() => {
     const newTime = setInterval(() => {
-      setTime((prev: any) => (prev = moment().format('HH:mm:ss')));
+      setTime((prev) => (prev = moment().format('HH:mm:ss')));
     }, 1000);
 
     return () => {

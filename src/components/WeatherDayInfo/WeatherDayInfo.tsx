@@ -19,18 +19,18 @@ const WeatherDayInfo = () => {
   return (
     <div className="weatherDayInfo-cont">
       <div className="weatherDayInfo-info">
-        <div>Температура: </div>
-        <div>Ветер: </div>
-        <div>Влажность: </div>
+        <div className="weatherDayInfo-info__cont-info cont-info cont-info__name">Температура: </div>
+        <div className="cont-info cont-info__name">Ветер: </div>
+        <div className="cont-info cont-info__name">Влажность: </div>
+        <div className="cont-info cont-info__name">Давление: </div>
       </div>
       <div>
-        <div>
-          {success && `${Math.round(weather.list[0].main.temp - 273)}`} &deg;C - ощущается как
-          {success && ` ${Math.round(weather.list[0].main.feels_like - 273)}`}
-          &deg;C
+        <div className="cont-info">
+          {success && `${Math.round(weather.list[0].main.temp - 273)}`} ° -{success && ` ${Math.round(weather.list[0].main.feels_like - 273)}`}°
         </div>
-        <div>{success && Math.round(weather.list[0].wind.speed)} м/с</div>
-        <div>{success && weather.list[0].main.humidity} %</div>
+        <div className="cont-info">{success && Math.round(weather.list[0].wind.speed)} м/с</div>
+        <div className="cont-info">{success && weather.list[0].main.humidity} %</div>
+        <div className="cont-info">{success && weather.list[0].main.pressure} гПа</div>
       </div>
     </div>
   );

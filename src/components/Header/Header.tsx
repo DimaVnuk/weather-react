@@ -1,21 +1,23 @@
 import React from 'react';
 
+import iconHeader from '@/assets/svg/iconHeader.png';
 import Selected from '@/components/Selected/Selected';
 import { HeaderProps } from '@/interfaces/HeaderProps';
 const Header = ({ handleChange, selected }: HeaderProps) => {
   return (
     <header className="header-cont">
-      <div>
-        <h1>Weather</h1>
+      <div className="header-cont__title-img">
+        <h1 className="font-title">Weather</h1>
+        <img src={iconHeader} />
       </div>
-      <div className="header-contInput">
-        <select onChange={handleChange} defaultValue={selected}>
+      <div className="cont-selected">
+        <Selected />
+      </div>
+      <div className="cont-theme">
+        <select className="theme-select" onChange={handleChange} defaultValue={selected}>
           <option value="light">Light Theme</option>
           <option value="dark">Dark Theme</option>
         </select>
-        <div>
-          <Selected />
-        </div>
       </div>
     </header>
   );

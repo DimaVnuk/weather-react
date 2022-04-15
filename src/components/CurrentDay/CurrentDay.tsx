@@ -1,7 +1,6 @@
 import moment from 'moment';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
-import rain from '@/assets/svg/rain.svg';
 import Clock from '@/components/Clock/Clock';
 import Loader from '@/components/Loader/Loader';
 import useFetch from '@/hooks/useFetch';
@@ -19,23 +18,23 @@ const CurrentDay = () => {
     );
   }
 
-  const date = moment().format('DD:MM:YYYY');
+  const date = moment().format('DD.MM.YYYY');
   return (
     <div className="currentDay-cont">
       <div className="currentDay-temp__cont">
-        <div>
+        <div className="currentDay-with-date">
           <p className="currentDay-temp__font">
-            {success && `${Math.round(weather.list[0].main.temp - 273)}`} <span className="font-celsius">&deg;C</span>
+            {success && `${Math.round(weather.list[0].main.temp - 273)}`} <span className="font-celsius">°</span>
           </p>
           <p className="currentDay-date">{success && date}</p>
         </div>
-        <div>{success && <Image src={`http://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`} alt="rain" />}</div>
+        <div className="weather-icon">{success && <Image src={`http://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`} alt="rain" />}</div>
       </div>
       <div className="currentDay-time__cont">
         <p>
           Время: <Clock />
         </p>
-        <p>Город: </p>
+        <p className="city">Город: </p>
       </div>
     </div>
   );

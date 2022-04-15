@@ -1,13 +1,23 @@
+@import '@/styles/variables.scss';
+
 .weatherDayInfo-cont {
-  width: 35%;
-  height: 40vh;
+  @include containerForWeather;
   margin-left: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.7rem;
-  border: 1px solid #000;
+  background: url('../../assets/img/weather.jpg') no-repeat;
+  background-size: cover;
+  font-size: 1.9rem;
+  font-weight: bolder;
+  color: white;
   .weatherDayInfo-info {
     margin-right: 20px;
   }
+}
+
+.cont-info {
+  height: 65px;
+  display: flex;
+  align-items: center;
 }
