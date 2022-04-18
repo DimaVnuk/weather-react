@@ -1,7 +1,6 @@
 import React from 'react';
 
 import iconHeader from '@/assets/svg/iconHeader.png';
-import Selected from '@/components/Selected/Selected';
 import { HeaderProps } from '@/interfaces/HeaderProps';
 const Header = ({ handleChange, selected }: HeaderProps) => {
   return (
@@ -9,9 +8,6 @@ const Header = ({ handleChange, selected }: HeaderProps) => {
       <div className="header-cont__title-img">
         <h1 className="font-title">Weather</h1>
         <img src={iconHeader} />
-      </div>
-      <div className="cont-selected">
-        <Selected />
       </div>
       <div className="cont-theme">
         <select className="theme-select" onChange={handleChange} defaultValue={selected}>
