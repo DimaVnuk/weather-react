@@ -24,11 +24,11 @@ const CurrentDay = () => {
       <div className="currentDay-temp__cont">
         <div className="currentDay-with-date">
           <p className="currentDay-temp__font">
-            {success && `${Math.round(weather.list[0].main.temp - 273)}`} <span className="font-celsius">°</span>
+            {success && `${Math.round(weather[0].main.temp - 273)}`} <span className="font-celsius">°</span>
           </p>
           <p className="currentDay-date">{success && date}</p>
         </div>
-        <div className="weather-icon">{success && <Image src={`http://openweathermap.org/img/wn/${weather.list[0].weather[0].icon}@2x.png`} alt="rain" />}</div>
+        <div className="weather-icon">{success && <Image src={`http://openweathermap.org/img/wn/${weather[0].weather[0].icon}@2x.png`} alt="rain" />}</div>
       </div>
       <div className="currentDay-time__cont">
         <p>

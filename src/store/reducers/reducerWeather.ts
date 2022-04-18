@@ -1,7 +1,7 @@
 import { WeatherAction, WeatherActionTypes, WeatherState } from '@/interfaces/IWeather';
 
 const initialState: WeatherState = {
-  weather: {},
+  weather: [],
   loading: false,
   success: false,
   error: false,

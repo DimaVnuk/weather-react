@@ -26,11 +26,11 @@ const WeatherDayInfo = () => {
       </div>
       <div>
         <div className="cont-info">
-          {success && `${Math.round(weather.list[0].main.temp - 273)}`} ° -{success && ` ${Math.round(weather.list[0].main.feels_like - 273)}`}°
+          {success && `${Math.round(weather[0].main.temp - 273)}`} ° -{success && ` ${Math.round(weather[0].main.feels_like - 273)}`}°
         </div>
-        <div className="cont-info">{success && Math.round(weather.list[0].wind.speed)} м/с</div>
-        <div className="cont-info">{success && weather.list[0].main.humidity} %</div>
-        <div className="cont-info">{success && weather.list[0].main.pressure} гПа</div>
+        <div className="cont-info">{success && Math.round(weather[0].wind.speed)} м/с</div>
+        <div className="cont-info">{success && weather[0].main.humidity} %</div>
+        <div className="cont-info">{success && weather[0].main.pressure} гПа</div>
       </div>
     </div>
   );
