@@ -9,7 +9,7 @@ import WeatherCard from '@/containers/WeatherCard/WeatherCard';
 import useFetch from '@/hooks/useFetch';
 import { useTypeSelector } from '@/hooks/useTypeSelector';
 import { HeaderProps } from '@/interfaces/HeaderProps';
-import { getWeather } from '@/store/actions/actionWeather';
+import getWeather from '@/store/actions/actionWeather';
 const Home = ({ handleChange, selected }: HeaderProps) => {
   const { weather, loading, success } = useTypeSelector((state) => state.weather);
   useFetch();

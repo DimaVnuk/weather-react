@@ -1,9 +1,9 @@
 import axios from 'axios';
+import memoize from 'lodash.memoize';
 import { Dispatch } from 'redux';
 
 import { WeatherAction, WeatherActionTypes } from '@/interfaces/IWeather';
-const FAKE = 'https://jsonplaceholder.typicode.com/users';
-export const getWeather = (city = 'Minsk') => {
+const getWeather = (city = 'Minsk') => {
   return async (dispatch: Dispatch<WeatherAction>) => {
     dispatch({ type: WeatherActionTypes.SET_WEATHER });
     axios
@@ -20,3 +20,5 @@ export const getWeather = (city = 'Minsk') => {
       });
   };
 };
+
+export default memoize(getWeather);
