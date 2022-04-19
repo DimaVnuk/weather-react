@@ -1,0 +1,16 @@
+{
+  "title": "Weather",
+  "theme-light": "Light Theme",
+  "theme-dark": "Dark Theme",
+  "search": "SEARCH",
+  "ru": "RU",
+  "en": "EN",
+  "time": "Time",
+  "city": "City",
+  "temp": "Temperature",
+  "wind": "Wind",
+  "humidity": "Humidity",
+  "pressure": "Pressure",
+  "speed": "m/s",
+  "hpa": "hPA"
+}

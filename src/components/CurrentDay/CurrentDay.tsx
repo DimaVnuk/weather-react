@@ -1,5 +1,6 @@
 import moment from 'moment';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Clock from '@/components/Clock/Clock';
 import Loader from '@/components/Loader/Loader';
@@ -9,7 +10,7 @@ import { Image } from '@/styled-components/Image';
 const CurrentDay = () => {
   const { weather, loading, success } = useTypeSelector((state) => state.weather);
   useFetch();
-
+  const { t } = useTranslation();
   if (loading) {
     return (
       <>
@@ -32,9 +33,9 @@ const CurrentDay = () => {
       </div>
       <div className="currentDay-time__cont">
         <p>
-          Время: <Clock />
+          {t('time')}: <Clock />
         </p>
-        <p className="city">Город: </p>
+        <p className="city">{t('city')}: </p>
       </div>
     </div>
   );

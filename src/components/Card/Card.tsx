@@ -1,5 +1,6 @@
 import moment from 'moment';
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import useFetch from '@/hooks/useFetch';
 import { useTypeSelector } from '@/hooks/useTypeSelector';
@@ -9,6 +10,7 @@ import Loader from '../Loader/Loader';
 const Card = () => {
   const { weather, loading, success } = useTypeSelector((state) => state.weather);
   useFetch();
+  const { t, i18n } = useTranslation();
 
   console.log(weather);
 
@@ -21,9 +23,10 @@ const Card = () => {
   }
 
   function getWeekDay(date: Date) {
-    const days = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+    const daysRU = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+    const daysEN = ['SUN', 'MO', 'TU', 'WE', 'TH', 'FR', 'SUT'];
 
-    return days[date.getDay()];
+    return i18n.language === 'ru' ? daysRU[date.getDay()] : daysEN[date.getDay()];
   }
   const getWeatherFiveDay = () => {
     return weather.map((i: any, idx: number) => {
@@ -38,7 +41,6 @@ const Card = () => {
           <div>
             {success && `${Math.round(i.main.feels_like - 273)}`} <span className="font-celsius">°</span>
           </div>
-          <div>{success && i.weather[0].main}</div>
         </div>
       );
     });
