@@ -1,9 +1,6 @@
-import 'react-toastify/dist/ReactToastify.css';
-
 import moment from 'moment';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { ToastContainer } from 'react-toastify';
 
 import Clock from '@/components/Clock/Clock';
 import Loader from '@/components/Loader/Loader';

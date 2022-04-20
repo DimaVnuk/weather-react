@@ -1,6 +1,5 @@
 import axios from 'axios';
 import memoize from 'lodash.memoize';
-import { toast } from 'react-toastify';
 import { Dispatch } from 'redux';
 
 import { KEY_ID } from '@/constants/URL';
@@ -23,14 +22,6 @@ const getWeather = (city = searchCity) => {
       )
       .catch((err) => {
         console.log(err.response, err);
-        toast.error(err.response.data.message, {
-          position: 'top-left',
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: false,
-        });
         dispatch({ type: WeatherActionTypes.SET_WEATHER_ERROR, payload: err.response });
       });
   };
