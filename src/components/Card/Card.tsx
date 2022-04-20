@@ -12,8 +12,6 @@ const Card = () => {
   useFetch();
   const { i18n } = useTranslation();
 
-  console.log(weather);
-
   if (loading) {
     return (
       <>
