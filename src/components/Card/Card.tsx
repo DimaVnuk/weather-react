@@ -10,7 +10,7 @@ import Loader from '../Loader/Loader';
 const Card = () => {
   const { weather, loading, success } = useTypeSelector((state) => state.weather);
   useFetch();
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
 
   console.log(weather);
 
