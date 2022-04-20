@@ -16,8 +16,12 @@ const Header = ({ handleChange, selected }: HeaderProps) => {
       <div className="header-cont__title-img">
         <h1 className="font-title">{t('title')}</h1>
         <img src={iconHeader} />
-        <button className="btn-lang" onClick={changeLanguage('ru')}>{t('ru')}</button>
-        <button className="btn-lang" onClick={changeLanguage('en')}>{t('en')}</button>
+        <button className="btn-lang" onClick={changeLanguage('ru')}>
+          {t('ru')}
+        </button>
+        <button className="btn-lang" onClick={changeLanguage('en')}>
+          {t('en')}
+        </button>
       </div>
       <div className="cont-theme">
         <select className="theme-select" onChange={handleChange} defaultValue={selected}>

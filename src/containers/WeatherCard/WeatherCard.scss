@@ -1,8 +1,26 @@
 .weatherCard-cont {
-  width: 100%;
+  width: 80%;
   height: 20vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+}
+
+@media (max-width: 990px) {
+  .weatherCard-cont {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .weatherCard-cont {
+    width: 90%;
+  }
+}
+
+@media (max-width: 820px) {
+  .weatherCard-cont {
+    width: 90%;
+  }
 }

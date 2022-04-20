@@ -32,7 +32,7 @@ const Card = () => {
     return weather.map((i: any, idx: number) => {
       return (
         <div key={idx} className="card-cont">
-          <div>{i.dt_txt.split(' ').shift().split('-').reverse().join('-')}</div>
+          <div className="wrap-date">{i.dt_txt.split(' ').shift().split('-').reverse().join('-')}</div>
           <div>{getWeekDay(new Date(i.dt_txt))}</div>
           <div>{success && <Image src={`http://openweathermap.org/img/wn/${i.weather[0].icon}@2x.png`} alt="rain" />}</div>
           <div>

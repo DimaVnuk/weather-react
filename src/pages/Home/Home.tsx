@@ -30,9 +30,11 @@ const Home = ({ handleChange, selected }: HeaderProps) => {
     <div className="home">
       <Header handleChange={handleChange} selected={selected} />
       <form className="cont-selected" onSubmit={handleSubmit}>
-        <Selected handleOnChange={(e: any) => handleOnChange(e)} value={searchInput} />
+        <div className="input-search-cont">
+          <Selected className="input-search" handleOnChange={(e: any) => handleOnChange(e)} value={searchInput} />
+        </div>
         <div>
-          <Button variant="contained" onClick={handleSubmit}>
+          <Button className="search-btn" variant="contained" onClick={handleSubmit}>
             {t('search')}
           </Button>
         </div>
