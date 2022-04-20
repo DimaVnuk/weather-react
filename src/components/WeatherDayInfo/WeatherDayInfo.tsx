@@ -6,7 +6,7 @@ import useFetch from '@/hooks/useFetch';
 import { useTypeSelector } from '@/hooks/useTypeSelector';
 
 const WeatherDayInfo = () => {
-  const { weather, loading, success } = useTypeSelector((state) => state.weather);
+  const { weather, loading, success, error } = useTypeSelector((state) => state.weather);
   useFetch();
   const { t } = useTranslation();
   if (loading) {
@@ -15,6 +15,9 @@ const WeatherDayInfo = () => {
         <Loader />
       </>
     );
+  }
+  if (error) {
+    return <>{console.log(error)} </>;
   }
 
   return (

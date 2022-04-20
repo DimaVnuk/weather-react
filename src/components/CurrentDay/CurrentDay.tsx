@@ -1,6 +1,9 @@
+import 'react-toastify/dist/ReactToastify.css';
+
 import moment from 'moment';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { ToastContainer } from 'react-toastify';
 
 import Clock from '@/components/Clock/Clock';
 import Loader from '@/components/Loader/Loader';
@@ -19,6 +22,7 @@ const CurrentDay = () => {
     );
   }
 
+  const currCity = localStorage.getItem('city');
   const date = moment().format('DD.MM.YYYY');
   return (
     <div className="currentDay-cont">
@@ -35,7 +39,9 @@ const CurrentDay = () => {
         <p>
           {t('time')}: <Clock />
         </p>
-        <p className="city">{t('city')}: </p>
+        <p className="city">
+          {t('city')}: {currCity?.toLocaleUpperCase()}
+        </p>
       </div>
     </div>
   );

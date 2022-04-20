@@ -1,8 +1,8 @@
-@import "@/styles/variables.scss";
+@import '@/styles/variables.scss';
 
 .currentDay-cont {
   @include containerForWeather;
-  background: url("../../assets/img/cloud.jpg") no-repeat;
+  background: url('../../assets/img/cloud.jpg') no-repeat;
   background-size: cover;
   color: white;
   .currentDay-temp__cont {

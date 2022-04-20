@@ -12,5 +12,6 @@
   "humidity": "Humidity",
   "pressure": "Pressure",
   "speed": "m/s",
-  "hpa": "hPA"
+  "hpa": "hPA",
+  "placeholder": "Enter the city"
 }

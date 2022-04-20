@@ -13,24 +13,26 @@ const Home = ({ handleChange, selected }: HeaderProps) => {
   const { t } = useTranslation();
   const [searchInput, setSearchInput] = useState('');
   const dispatch = useDispatch();
-
+  // i dont now type event
   const handleSubmit = (e: any) => {
     e.preventDefault();
     if (searchInput) {
       dispatch(getWeather(searchInput));
-      setSearchInput((prev) => (prev = ''));
+      localStorage.setItem('city', searchInput);
     }
   };
 
+  // i dont now type event
   const handleOnChange = (e: any) => {
     setSearchInput(e.target.value);
   };
+  const geo = localStorage.getItem('default');
   return (
     <div className="home">
       <Header handleChange={handleChange} selected={selected} />
       <form className="cont-selected" onSubmit={handleSubmit}>
         <div className="input-search-cont">
-          <Selected className="input-search" handleOnChange={(e: any) => handleOnChange(e)} value={searchInput} />
+          <Selected className="input-search" handleOnChange={(e: any) => handleOnChange(e)} value={searchInput} placeholder={t('placeholder')} />
         </div>
         <div>
           <Button className="search-btn" variant="contained" onClick={handleSubmit}>
@@ -38,6 +40,7 @@ const Home = ({ handleChange, selected }: HeaderProps) => {
           </Button>
         </div>
       </form>
+      <h3>Ваш город: {geo}</h3>
       <CurrenDayInfoDay />
       <WeatherCard />
     </div>

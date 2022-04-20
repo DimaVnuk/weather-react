@@ -3,7 +3,7 @@
   "name": "Weather PWA",
   "icons": [
     {
-      "src":"icon.png",
+      "src": "icon.png",
       "sizes": "192x192",
       "type": "image/png"
     }
