@@ -1,0 +1,84 @@
+@import '@/styles/variables.scss';
+
+.weatherDayInfo-cont {
+  @include containerForWeather;
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('../../assets/img/weather.jpg') no-repeat;
+  background-size: cover;
+  font-size: 1.9rem;
+  font-weight: bolder;
+  color: white;
+  .weatherDayInfo-info {
+    margin-right: 20px;
+  }
+}
+
+.cont-info {
+  height: 65px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1100px) {
+  .weatherDayInfo-cont {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .weatherDayInfo-cont {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 820px) {
+  .weatherDayInfo-cont {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 730px) {
+  .weatherDayInfo-cont {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .weatherDayInfo-cont {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .weatherDayInfo-cont {
+    width: 60%;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 485px) {
+  .weatherDayInfo-cont {
+    width: 60%;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 445px) {
+  .weatherDayInfo-cont {
+    width: 80%;
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .weatherDayInfo-cont {
+    width: 90%;
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,7 @@
+@mixin containerForWeather {
+  width: 35%;
+  height: 40vh;
+  border-radius: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.692);
+  text-shadow: 3px 2px 2px black;
+}

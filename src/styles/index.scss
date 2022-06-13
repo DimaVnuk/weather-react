@@ -1,0 +1,11 @@
+@import '~normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Frank+Ruhl+Libre:wght@900&display=swap');
+@import '@/pages/Home/Home.scss';
+@import '@/components/Card/Card.scss';
+@import '@/components/CurrentDay/CurrentDay.scss';
+@import '@/components/Header/Header.scss';
+@import '@/components/WeatherDayInfo/WeatherDayInfo.scss';
+@import '@/containers/CurrenDayInfoDay/CurrenDayInfoDay.scss';
+@import '@/containers/WeatherCard/WeatherCard.scss';
+@import '@/components/Loader/Loader.scss';
+@import '@/components/Selected/Selected.scss';
